@@ -5,9 +5,16 @@ var randomNumber = Math.floor(Math.random()*10+1);
 var count=1;
 function makeGuess(){
    var input = Number(prompt("LÜtfen 1 ile 10 arasında sayı giriniz")) 
+    console.log("gelen değer "+input);
     return guessGame(input);
 }
+
+
 function guessGame(input) {  
+    while(isNaN(input)|| input<1 || input>10){
+        alert("Geçersiz sayı girdiniz");
+        makeGuess();
+    }
     if(input>randomNumber){
         alert("Büyük tahminde bulundun");
         count++;
