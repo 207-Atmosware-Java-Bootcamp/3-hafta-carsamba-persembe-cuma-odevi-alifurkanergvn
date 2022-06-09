@@ -1,9 +1,13 @@
 //ÖDEV-3 verilen bir sayının negatif mi pozitif mi olduğunu bulan algoritma ?
 
-var input = String(prompt("Lütfen bir sayı giriniz"));
+var input = Number(prompt("Lütfen bir sayı giriniz"));
 
-if(input>=0){
+if(input>0){
     document.write(+input+" pozitifdir.");
-}else{
+}else if(input<0){
     document.write(+input+" negatifdir.");
+}else if(input==0){
+    document.write(+input+" 0 nötür bir sayıdır");
+}else{
+    document.write("Lütfen geçerli bir sayı giriniz");
 }
